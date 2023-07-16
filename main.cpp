@@ -196,53 +196,53 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1)
+Thing 1) F1 Race
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of car brand participate
+    2) amount of viewer per race
+    3) number of circuit
+    4) total racer participate
+    5) total of engineer per car
 3 things it can do:
-    1)
-    2)
-    3)
+    1) generate revenue from race
+    2) do race 
+    3) press confrence after race
 
-Thing 2)
+Thing 2) Restaurant
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of waiter
+    2) count of revenue per day
+    3) number of chef
+    4) list of raw material
+    5) list of menu
 3 things it can do:
-    1)
-    2)
-    3)
+    1) made food for customer 
+    2) charge customer
+    3) serving customer
 
-Thing 3)
+Thing 3) IKEA Store
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) list of article 
+    2) number of co worker
+    3) average revenue per day
+    4) number of stores
+    5) list of Food menu
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Delivery order to customer
+    2) showcase room setting
+    3) return articles
 
-Thing 4)
+Thing 4) Hotel
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of rooms
+    2) list of hotel menu
+    3) total of hoteliers
+    4) count of smoking room
+    5) average visit per day
 3 things it can do:
-    1)
-    2)
-    3)
+    1) provide room service
+    2) book room for stay
+    3) reserve hotel restaurant
 */
 
 /*
