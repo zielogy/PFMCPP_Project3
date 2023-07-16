@@ -83,51 +83,51 @@ Main Object: Car Interior
         Name 4 nouns you'll find on the [Sub Object]
             1) paddle shifters
             2) 'cruise control' controls
-            3) 
-            4) 
+            3) Horn
+            4) 'Audio' controls
         Name 2 actions that the [Sub Object] can do:
             1) adjust cruise control settings.
-            2)
+            2) increase volume of head unit
         
     Sub Object: Instrument Cluster
         Name 4 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
-            4)
+            1) trip odometer
+            2) engine speed/RPM
+            3) fuel level
+            4) engine temperature
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) check trip odometer
+            2) monitor fuel level
+            3) check engine speed/RPM
     
     Sub Object: Environment Controls
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) AC climate control
+            2) switch on/off head unit 
+            3) gear shift transmissions
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) increase/decrease AC temperature
+            2) turn on/off head unit
+            3) shifting transmissions
 
     Sub Object: Infotainment System
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) navigation
+            2) radio
+            3) apple car play
         Name 3 actions that the [Sub Object] can do:
-            1)
-            2)
-            3)
+            1) enter destination
+            2) choose radio frequency
+            3) connect to apple car play
 
     Sub Object: Seat 
         Name 3 nouns you'll find on the [Sub Object]
-            1)
-            2)
-            3)
+            1) head rest
+            2) reclining controls 
+            3) lumbar support controls
         Name 2 actions that the [Sub Object] can do:
-            1)
-            2)
+            1) adjust headrest
+            2) adjust reclining position
 */
 
 /*
