@@ -359,17 +359,17 @@ Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will
 be their own UDTs you'll define these 5 sub-objects in Part 1d.
 
-Thing 10)
+Thing 10) POS
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) barcode scanner
+    2) customer display
+    3) main display
+    4) receipt printer
+    5) cash drawer
 3 things it can do:
-    1)
-    2)
-    3)
+    1) Input transaction
+    2) print reciept
+    3) open cash drawer
  */
 
 /*
@@ -459,65 +459,65 @@ example:
 object in plain English. Remember to pick properties that can be represented
 with 'int float double bool char std::string'.
 
-Thing 5)
+Thing 5) barcode scanner
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) infrared scanner
+    2) height in cm
+    3) width in cm
+    4) sensitivity
+    5) build of material
 3 things it can do:
-    1)
-    2)
-    3)
+    1) swith on infrared scanner
+    2) configure sensitivity
+    3) connect with computer
 
-Thing 6)
+Thing 6) customer pole display
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) screen resolution
+    2) height in cm
+    3) width in cm
+    4) power consumption (wh)
+    5) brand
 3 things it can do:
-    1)
-    2)
-    3)
+    1) configure text to display
+    2) check connection with POS
+    3) turn on/off
 
-Thing 7)
+Thing 7) main POS display
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) screen resolution
+    2) height in cm
+    3) width in cm
+    4) screen to bezel ratio
+    5) brightness level
 3 things it can do:
-    1)
-    2)
-    3)
+    1) adjust screen resolution
+    2) adjust brightness level
+    3) connect to computer
 
-Thing 8)
+Thing 8) receipt printer
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) height in cm
+    2) weight in cm
+    3) paper roll size
+    4) power consumption (wh)
+    5) button 
 3 things it can do:
-    1)
-    2)
-    3)
+    1) turn on/off
+    2) print receipt
+    3) connect to POS
 
-Thing 9)
+Thing 9) cash drawer
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) ejector
+    2) compartment
+    3) key 
+    4) mounting
+    5) braket
 3 things it can do:
-    1)
-    2)
-    3)
+    1) put money
+    2) open cash drawer
+    3) connect to POS
  */
 
 /*
@@ -1003,16 +1003,16 @@ Now that you've made changes, make a commit!
 Be sure to make the commit message meaningful.
 */
 } // end namespace Part1E_Step13
-  /*
-  =================
- Part 1e - Step 15: Assignment
- =================
- 7) After you finish defining each type, click the [run] button.
-     Clear up any errors or warnings as best you can.
-     if your code produces a [-Wpadded] warning, add '-Wno-padded' to the .replit
-  file with the other compiler flags (-Weverything -Wno-missing-prototypes etc
-  etc)
-  */
+/*
+=================
+Part 1e - Step 15: Assignment
+=================
+7) After you finish defining each type, click the [run] button.
+   Clear up any errors or warnings as best you can.
+   if your code produces a [-Wpadded] warning, add '-Wno-padded' to the .replit
+file with the other compiler flags (-Weverything -Wno-missing-prototypes etc
+etc)
+*/
 
 /*
 =================
