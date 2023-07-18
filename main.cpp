@@ -461,7 +461,7 @@ with 'int float double bool char std::string'.
 
 Thing 5) barcode scanner
 5 properties:
-    1) infrared scanner
+    1) infrared scanner type
     2) height in cm
     3) width in cm
     4) sensitivity
@@ -501,7 +501,7 @@ Thing 8) receipt printer
     2) weight in cm
     3) paper roll size
     4) power consumption (wh)
-    5) button 
+    5) button type
 3 things it can do:
     1) turn on/off
     2) print receipt
@@ -509,11 +509,11 @@ Thing 8) receipt printer
 
 Thing 9) cash drawer
 5 properties:
-    1) ejector
-    2) compartment
-    3) key 
-    4) mounting
-    5) braket
+    1) ejector type
+    2) compartment size
+    3) key type
+    4) mounting size
+    5) braket size
 3 things it can do:
     1) put money
     2) open cash drawer
@@ -545,6 +545,49 @@ example:
         Brightness (double)
         width in cm (int)
         height in cm (int)
+*/
+
+/*
+Thing 5) barcode scanner
+5 properties:
+    1) infrared scanner type (char)
+    2) height in cm (int)
+    3) width in cm (int)
+    4) sensitivity (int)
+    5) build of material (std:string)
+
+Thing 6) customer pole display
+5 properties:
+    1) screen resolution (int)
+    2) height in cm (int)
+    3) width in cm (int)
+    4) power consumption () (float)
+    5) brand (int)
+
+Thing 7) main POS display
+5 properties:
+    1) screen resolution (int)
+    2) height in cm (int)
+    3) width in cm (int)
+    4) screen to bezel ratio (int)
+    5) brightness level (int)
+
+Thing 8) receipt printer
+5 properties:
+    1) height in cm (int)
+    2) weight in cm (int)
+    3) paper roll size (int)
+    4) power consumption (wh) (int)
+    5) button type (int)
+
+Thing 9) cash drawer
+5 properties:
+    1) ejector type (char)
+    2) compartment size (int)
+    3) key type (std:string)
+    4) mounting size (int)
+    5) braket size (int)
+
 */
 
 /*
