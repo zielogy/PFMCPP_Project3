@@ -548,49 +548,6 @@ example:
 */
 
 /*
-Thing 5) barcode scanner
-5 properties:
-    1) infrared scanner type (char)
-    2) height in cm (int)
-    3) width in cm (int)
-    4) sensitivity (int)
-    5) build of material (std:string)
-
-Thing 6) customer pole display
-5 properties:
-    1) screen resolution (int)
-    2) height in cm (int)
-    3) width in cm (int)
-    4) power consumption () (float)
-    5) brand (int)
-
-Thing 7) main POS display
-5 properties:
-    1) screen resolution (int)
-    2) height in cm (int)
-    3) width in cm (int)
-    4) screen to bezel ratio (int)
-    5) brightness level (int)
-
-Thing 8) receipt printer
-5 properties:
-    1) height in cm (int)
-    2) weight in cm (int)
-    3) paper roll size (int)
-    4) power consumption (wh) (int)
-    5) button type (int)
-
-Thing 9) cash drawer
-5 properties:
-    1) ejector type (char)
-    2) compartment size (int)
-    3) key type (std:string)
-    4) mounting size (int)
-    5) braket size (int)
-
-*/
-
-/*
 =================
 Part 1d - Step 5: Commit
 =================
@@ -803,6 +760,61 @@ struct CarWash // This is the empty struct, below my plain-English UDT.
 Notice that the struct name 'CarWash' conforms with the Course Coding Standard,
 described in the Readme.MD
 */
+
+struct F1Race
+{
+    
+};
+
+struct Restaurant
+{
+    
+};
+
+
+struct IKEAStore
+{
+    
+};
+
+struct Hotel
+{
+    
+};
+
+    
+struct barcodeScanner
+{
+    
+};
+
+
+struct customerPoleDisplay
+{
+    
+};
+
+
+struct mainPOSDisplay
+{
+    
+};
+
+struct receiptPrinter
+{
+    
+};
+
+
+struct cashDrawer
+{
+    
+};
+
+struct POS
+{
+    
+};
 
 /*
 =================
