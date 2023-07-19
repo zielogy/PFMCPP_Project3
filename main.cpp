@@ -244,7 +244,7 @@ Thing 4) Hotel
 5 properties:
     1) number of rooms
     2) list of hotel menu
-    3) total of hoteliers
+    3) total of co worker
     4) count of smoking room
     5) average visit per day
 3 things it can do:
@@ -613,9 +613,9 @@ Thing 4) Hotel
 5 properties:
     1) number of rooms
     2) list of hotel menu
-    3) total of hoteliers
+    3) total of co worker
     4) count of smoking room
-    5) average visit per day
+    5) average occupancy per day
 3 things it can do:
     1) provide room service
     2) book room for stay
@@ -899,9 +899,9 @@ struct Hotel
     // 5 properties:
     //     1) number of rooms
     //     2) list of hotel menu
-    //     3) total of hoteliers
+    //     3) total of co worker
     //     4) count of smoking room
-    //     5) average visit per day
+    //     5) average occupancy per day
     // 3 things it can do:
     //     1) provide room service
     //     2) book room for stay
@@ -1031,6 +1031,199 @@ struct CarWash {
   //     - charge customer
   //     - detail the car interior
 };
+
+//Answer
+struct F1Race
+{
+    //     1) number of car brand participate
+    int numCarBrand = 12;
+    //     2) amount of viewer per race
+    int amtViewerPerRace = 10000;
+    //     3) number of circuit
+    int numOfCircuit = 20;
+    //     4) total racer participate
+    int totalRacer = 24;
+    //     5) total of engineer per car
+    int numOfEngineerPerCar = 50;
+//     3 things it can do:
+    //     1) generate revenue from race
+    //     2) do race
+    //     3) press confrence after race
+};
+
+struct Restaurant
+{
+    //     1) number of waiter
+    int numOfWaiter = 7;
+    //     2) count of revenue per day
+    float revenuePerDay = 12500.50;
+    //     3) number of chef
+    int numOfChef = 2;
+    //     4) list of raw material
+    std::string listOfRawMaterial[3] = {"onion", "salt", "letuce"};
+    //     5) list of menu
+    std::string listOfMenul[3] = {"fried rice", "spaghetti", "letuce"};
+    // 3 things it can do:
+    //     1) made food for customer
+    //     2) charge customer
+    //     3) serving customer
+};
+
+
+struct IKEAStore
+{
+    // 5 properties:
+    //     1) list of article
+    std::string listOfArticle[3] = {"MALM", "POANG", "LERBERG"};
+    //     2) number of co worker
+    int numOfCoWorker = 1200;
+    //     3) average revenue per day
+    float avgRevenuePerDay = 200000.234;
+    //     4) number of stores
+    int numOfStores = 7;
+    //     5) list of Food menu
+    std::string listOfFoodMenu[3] = {"Sweedish Meatball", "Fish and Chips", "Sirloin Steak"};
+    // 3 things it can do:
+    //     1) Delivery order to customer
+    //     2) showcase room setting
+    //     3) return articles
+};
+
+struct Hotel
+{
+    //     1) number of rooms
+    int numOfRooms = 70;
+    //     2) list of hotel menu
+    std::string listOfHotelMenu[3] = {"Tuna sandwich", "Fish and Chips", "Sirloin Steak"};
+    //     3) total of co worker
+    int totalCoWorker = 100;
+    //     4) count of smoking room
+    int cntSmookingRoom = 10;
+    //     5) average occupancy per day
+    int avgVisitPerDay = 40;
+    // 3 things it can do:
+    //     1) provide room service
+    //     2) book room for stay
+    //     3) reserve hotel restaurant
+};
+
+    
+struct barcodeScanner
+{
+    //     1) infrared scanner type
+    std::string infraredType = "active sensor";
+    //     2) height in cm
+    int height = 3;
+    //     3) width in cm
+    int width = 2;
+    //     4) sensitivity
+    float sensitivity = 0.75;
+    //     5) build of material
+    std::string bom =  "Plastic";
+    // 3 things it can do:
+    //     1) swith on infrared scanner
+    //     2) configure sensitivity
+    //     3) connect with computer
+};
+
+
+struct customerPoleDisplay
+{
+    //     1) screen resolution
+    int screenResolution = 2160;
+    //     2) height in cm
+    int height = 10;
+    //     3) width in cm
+    int width = 3;
+    //     4) power consumption (wh)
+    float powerConsumption = 10.00;
+    //     5) brand
+    std::string brand = "Dell";
+    // 3 things it can do:
+    //     1) configure text to display
+    //     2) check connection with POS
+    //     3) turn on/off
+};
+
+
+struct mainPOSDisplay
+{
+    // 5 properties:
+    //     1) screen resolution
+    int screenResolution = 2160;
+    //     2) height in cm
+    int height = 10;
+    //     3) width in cm
+    int width = 3;
+    //     4) screen to bezel ratio
+    int screenRatio = 1;
+    //     5) brightness level
+    float brightnessLevel = 80.05;
+    // 3 things it can do:
+    //     1) adjust screen resolution
+    //     2) adjust brightness level
+    //     3) connect to computer
+};
+
+struct receiptPrinter
+{
+    // 5 properties:
+    //     1) height in cm
+    int height = 5;
+    //     2) weight in cm
+    int width = 7;
+    //     3) paper roll size in cm
+    int paperRollSize = 4;
+    //     4) power consumption (wh)
+    float powerConsumption = 10.00;
+    //     5) button type
+    std::string buttonType = "plastic";
+    // 3 things it can do:
+    //     1) turn on/off
+    //     2) print receipt
+    //     3) connect to POS
+};
+
+
+struct cashDrawer
+{
+    // 5 properties:
+    //     1) ejector type
+    std::string ejectorType = "Plastic";
+    //     2) compartment size in cm
+    int compartmentSize = 3;
+    //     3) key type
+    std::string keyType = "Mechanical";
+    //     4) mounting size in cm
+    double moutingSize = 0.2;
+    //     5) braket size in cm
+    double braketSize = 0.03;
+    // 3 things it can do:
+    //     1) put money
+    //     2) open cash drawer
+    //     3) connect to POS
+};
+
+struct POS
+{
+    // 5 properties:
+    //     1) barcode scanner type
+    std::string barcodeScannerType = "gun";
+    //     2) customer display type
+    std::string customerDisplayType = "3 inch customer pole display";
+    //     3) main display type
+    std::string mainDisplayType = "14 inch screen POS display";
+    //     4) receipt printer brand
+    std::string receiptPrinterBrand = "Dell";
+    //     5) cash drawer type
+    std::string cashDrawerType = "Medium Duty";
+    
+    // 3 things it can do:
+    //     1) Input transaction
+    //     2) print reciept
+    //     3) open cash drawer
+};
+    
 /*
 
 =================
