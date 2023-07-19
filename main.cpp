@@ -1755,6 +1755,27 @@ struct CellPhone {
       std::string applicationName); // returns how much memory (bytes) the
                                     // application asked for
 };
+
+struct barcodeScanner {}; // UDT 5
+struct customerPoleDisplay {}; // UDT 6
+struct mainPOSDisplay {}; // UDT 7
+struct receiptPrinter {}; // UDT 8
+struct cashDrawer {}; // UDT 9
+
+struct POS {
+  barcodeScanner scanner; // a member variabledeclaration of an instance of UDT 5
+  customerPoleDisplay poleDisplay; // a member variabledeclaration of an instance of UDT 6
+  mainPOSDisplay POSDisplay; // a member variabledeclaration of an instance of UDT 7
+  receiptPrinter receipt; // a member variabledeclaration of an instance of UDT 8
+  cashDrawer drawer; // a member variabledeclaration of an instance of UDT 9
+  
+  //     1) Input transaction
+  void inputTransaction(int articleNumber, float price, int quantity);
+  //     2) print reciept
+  void printReceipt(int orderNumber, std::string orderDetail[]);
+  //     3) open cash drawer
+  void openCashDrawer();
+};
 /*
 =================
 Part 1e - Step 14: Commit
