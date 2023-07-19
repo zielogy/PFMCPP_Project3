@@ -1476,6 +1476,49 @@ struct CarWash {
   // detail the car interior
   void detailInterior();
 };
+
+struct IKEAStore {
+  // 5 properties:
+  //     1) list of article
+  std::string listOfArticle[3] = {"MALM", "POANG", "LERBERG"};
+  //     2) number of co worker
+  int numOfCoWorker = 1200;
+  //     3) average revenue per day
+  float avgRevenuePerDay = 200000.234f;
+  //     4) number of stores
+  int numOfStores = 7;
+  //     5) list of Food menu
+  std::string listOfFoodMenu[3] = {"Sweedish Meatball", "Fish and Chips",
+                                   "Sirloin Steak"};
+  struct Restaurant {
+      //     1) number of waiter
+      int numOfWaiter = 7;
+      //     2) count of revenue per day
+      float revenuePerDay = 12500.50f;
+      //     3) number of chef
+      int numOfChef = 2;
+      //     4) list of raw material
+      std::string listOfRawMaterial[3] = {"onion", "salt", "letuce"};
+      //     5) list of menu
+      std::string listOfMenul[3] = {"Sweedish Meatball", "Fish and Chips", "Sirloin Steak"};
+      // 3 things it can do:
+      //     1) made food for customer
+      void madeFood(std::string orderedMenu, int totalOrder);
+      //     2) charge customer
+      double customerBilling (int numOrderedMenu, int numCustomer, float price); //return     customer billing
+      //     3) serving customer
+      void servingCustomer(int tableNumber, std::string orderedMenu);
+  };
+    
+  // 3 things it can do:
+  //     1) Delivery order to customer
+  void deliverToCustomer (int totalOrder, std::string customerDetail, std::string deliveryAddress);
+  //     2) showcase room setting
+  void showCaseRoomSetting (int roomSize, std::string roomName, std::string targetCustomer);
+  //     3) return articles
+  void returnArticle(std::string articleName, std::time_base returnTime, int receiptNum, std::string customerName);  
+};
+
 /*
 =================
 Part 1e - Step 10: Commit
