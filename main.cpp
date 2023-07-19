@@ -850,6 +850,151 @@ struct CarWash {
   //     - detail the car interior
 };
 
+//answer
+struct F1Race
+{
+//     5 properties:
+    //     1) number of car brand participate
+    //     2) amount of viewer per race
+    //     3) number of circuit
+    //     4) total racer participate
+    //     5) total of engineer per car
+//     3 things it can do:
+    //     1) generate revenue from race
+    //     2) do race
+    //     3) press confrence after race
+};
+
+struct Restaurant
+{
+    // 5 properties:
+    //     1) number of waiter
+    //     2) count of revenue per day
+    //     3) number of chef
+    //     4) list of raw material
+    //     5) list of menu
+    // 3 things it can do:
+    //     1) made food for customer
+    //     2) charge customer
+    //     3) serving customer
+};
+
+
+struct IKEAStore
+{
+    // 5 properties:
+    //     1) list of article
+    //     2) number of co worker
+    //     3) average revenue per day
+    //     4) number of stores
+    //     5) list of Food menu
+    // 3 things it can do:
+    //     1) Delivery order to customer
+    //     2) showcase room setting
+    //     3) return articles
+};
+
+struct Hotel
+{
+    // 5 properties:
+    //     1) number of rooms
+    //     2) list of hotel menu
+    //     3) total of hoteliers
+    //     4) count of smoking room
+    //     5) average visit per day
+    // 3 things it can do:
+    //     1) provide room service
+    //     2) book room for stay
+    //     3) reserve hotel restaurant
+};
+
+    
+struct barcodeScanner
+{
+    // 5 properties:
+    //     1) infrared scanner type
+    //     2) height in cm
+    //     3) width in cm
+    //     4) sensitivity
+    //     5) build of material
+    // 3 things it can do:
+    //     1) swith on infrared scanner
+    //     2) configure sensitivity
+    //     3) connect with computer
+};
+
+
+struct customerPoleDisplay
+{
+    // 5 properties:
+    //     1) screen resolution
+    //     2) height in cm
+    //     3) width in cm
+    //     4) power consumption (wh)
+    //     5) brand
+    // 3 things it can do:
+    //     1) configure text to display
+    //     2) check connection with POS
+    //     3) turn on/off
+};
+
+
+struct mainPOSDisplay
+{
+    // 5 properties:
+    //     1) screen resolution
+    //     2) height in cm
+    //     3) width in cm
+    //     4) screen to bezel ratio
+    //     5) brightness level
+    // 3 things it can do:
+    //     1) adjust screen resolution
+    //     2) adjust brightness level
+    //     3) connect to computer
+};
+
+struct receiptPrinter
+{
+    // 5 properties:
+    //     1) height in cm
+    //     2) weight in cm
+    //     3) paper roll size
+    //     4) power consumption (wh)
+    //     5) button type
+    // 3 things it can do:
+    //     1) turn on/off
+    //     2) print receipt
+    //     3) connect to POS
+};
+
+
+struct cashDrawer
+{
+    // 5 properties:
+    //     1) ejector type
+    //     2) compartment size
+    //     3) key type
+    //     4) mounting size
+    //     5) braket size
+    // 3 things it can do:
+    //     1) put money
+    //     2) open cash drawer
+    //     3) connect to POS
+};
+
+struct POS
+{
+    // 5 properties:
+    //     1) barcode scanner
+    //     2) customer display
+    //     3) main display
+    //     4) receipt printer
+    //     5) cash drawer
+    // 3 things it can do:
+    //     1) Input transaction
+    //     2) print reciept
+    //     3) open cash drawer
+};
 /*
 =================
 Part 1e - Step 4: Commit
