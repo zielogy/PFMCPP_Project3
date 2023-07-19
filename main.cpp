@@ -1217,7 +1217,9 @@ struct F1Race {
   int numOfEngineerPerCar = 50;
   //     3 things it can do:
   //     1) generate revenue from race
-  double calcRevenuePerRace (int numViewer, double incSponsorship); //return total revenue per     race
+  double
+  calcRevenuePerRace(int numViewer,
+                     double incSponsorship); // return total revenue per race
   //     2) do race
   void doRace();
   //     3) press confrence after race
@@ -1239,9 +1241,10 @@ struct Restaurant {
   //     1) made food for customer
   void madeFood(std::string orderedMenu, int totalOrder);
   //     2) charge customer
-  double customerBilling (int numOrderedMenu, int numCustomer, float price); //return customer     billing
+  double customerBilling(int numOrderedMenu, int numCustomer,
+                         float price); // return customer     billing
   //     3) serving customer
-  void servingCustomer(int tableNumber, std::string orderedMenu);
+  void servingCustomer(int orderNumber, std::string orderedMenu);
 };
 
 struct IKEAStore {
@@ -1259,11 +1262,14 @@ struct IKEAStore {
                                    "Sirloin Steak"};
   // 3 things it can do:
   //     1) Delivery order to customer
-  void deliverToCustomer (int totalOrder, std::string customerDetail, std::string deliveryAddress);
+  void deliverToCustomer(int totalOrder, std::string customerDetail,
+                         std::string deliveryAddress);
   //     2) showcase room setting
-  void showCaseRoomSetting (int roomSize, std::string roomName, std::string targetCustomer);
+  void showCaseRoomSetting(int roomSize, std::string roomName,
+                           std::string targetCustomer);
   //     3) return articles
-  void returnArticle(std::string articleName, std::time_base returnTime, int receiptNum, std::string customerName);  
+  void returnArticle(std::string articleName, std::time_base returnTime,
+                     int receiptNum, std::string customerName);
 };
 
 struct Hotel {
@@ -1280,11 +1286,12 @@ struct Hotel {
   int avgVisitPerDay = 40;
   // 3 things it can do:
   //     1) provide room service
-  void roomService (int roomNumber, std::string requestedService);
+  void roomService(int roomNumber, std::string requestedService);
   //     2) book room for stay
-  void bookRoom (int roomNumber, std::time_base date, std::string visitorName, float price);
+  void bookRoom(int roomNumber, std::time_base date, std::string visitorName,
+                float price);
   //     3) reserve hotel restaurant
-  void reserveRestaurant (std::string customerName, int numofCustomer); 
+  void reserveRestaurant(std::string customerName, int numofCustomer);
 };
 
 struct barcodeScanner {
@@ -1302,9 +1309,10 @@ struct barcodeScanner {
   //     1) swith on infrared scanner
   void turnOn();
   //     2) configure sensitivity
-  void configureSensitivity (int newNumber);
+  void configureSensitivity(int newNumber);
   //     3) connect with computer
-  bool connectingStatus (int portNumber); //return status connection with Computer
+  bool
+  connectingStatus(int portNumber); // return status connection with Computer
 };
 
 struct customerPoleDisplay {
@@ -1320,9 +1328,9 @@ struct customerPoleDisplay {
   std::string brand = "Dell";
   // 3 things it can do:
   //     1) configure text to display
-  void textToDisplay (std::string text);
+  void textToDisplay(std::string text);
   //     2) check connection with POS
-  bool checkConnection (int portNumber); // return status connection with POS
+  bool checkConnection(int portNumber); // return status connection with POS
   //     3) turn on/off
   void turnOn();
 };
@@ -1340,11 +1348,11 @@ struct mainPOSDisplay {
   float brightnessLevel = 80.f;
   // 3 things it can do:
   //     1) adjust screen resolution
-  void adjResolution (int newValue);
+  void adjResolution(int newValue);
   //     2) adjust brightness level
-  void adjBrightness (int newValue);
+  void adjBrightness(int newValue);
   //     3) connect to computer
-  bool checkConnection (int portNumber); //return connection status to computer
+  bool checkConnection(int portNumber); // return connection status to computer
 };
 
 struct receiptPrinter {
@@ -1362,9 +1370,9 @@ struct receiptPrinter {
   //     1) turn on/off
   void turnOn();
   //     2) print receipt
-  void printReceipt (std::string orderDetail[]);
+  void printReceipt(std::string orderDetail[]);
   //     3) connect to POS
-  bool conectToPOS (int portNumber); //return connection status to POS
+  bool conectToPOS(int portNumber); // return connection status to POS
 };
 
 struct cashDrawer {
@@ -1380,11 +1388,11 @@ struct cashDrawer {
   double braketSize = 0.03;
   // 3 things it can do:
   //     1) put money
-  float putMoney (float money); //return total balance on cash drawer
+  float putMoney(float money); // return total balance on cash drawer
   //     2) open cash drawer
-  void openCashDrawer ();
+  void openCashDrawer();
   //     3) connect to POS
-  bool conectToPOS (int portNumber); //return connection status to POS
+  bool conectToPOS(int portNumber); // return connection status to POS
 };
 
 struct POS {
@@ -1401,11 +1409,11 @@ struct POS {
 
   // 3 things it can do:
   //     1) Input transaction
-  void inputTransaction (int articleNumber, float price, int quantity);
+  void inputTransaction(int articleNumber, float price, int quantity);
   //     2) print reciept
   void printReceipt(std::string orderDetail[]);
   //     3) open cash drawer
-  void openCashDrawer ();
+  void openCashDrawer();
 };
 
 /*
@@ -1478,7 +1486,6 @@ struct CarWash {
 };
 
 struct IKEAStore {
-  // 5 properties:
   //     1) list of article
   std::string listOfArticle[3] = {"MALM", "POANG", "LERBERG"};
   //     2) number of co worker
@@ -1487,36 +1494,39 @@ struct IKEAStore {
   float avgRevenuePerDay = 200000.234f;
   //     4) number of stores
   int numOfStores = 7;
-  //     5) list of Food menu
-  std::string listOfFoodMenu[3] = {"Sweedish Meatball", "Fish and Chips",
-                                   "Sirloin Steak"};
+
   struct Restaurant {
-      //     1) number of waiter
-      int numOfWaiter = 7;
-      //     2) count of revenue per day
-      float revenuePerDay = 12500.50f;
-      //     3) number of chef
-      int numOfChef = 2;
-      //     4) list of raw material
-      std::string listOfRawMaterial[3] = {"onion", "salt", "letuce"};
-      //     5) list of menu
-      std::string listOfMenul[3] = {"Sweedish Meatball", "Fish and Chips", "Sirloin Steak"};
-      // 3 things it can do:
-      //     1) made food for customer
-      void madeFood(std::string orderedMenu, int totalOrder);
-      //     2) charge customer
-      double customerBilling (int numOrderedMenu, int numCustomer, float price); //return     customer billing
-      //     3) serving customer
-      void servingCustomer(int tableNumber, std::string orderedMenu);
+    //     1) number of waiter
+    int numOfWaiter = 7;
+    //     2) count of revenue per day
+    float revenuePerDay = 12500.50f;
+    //     3) number of chef
+    int numOfChef = 2;
+    //     4) list of raw material
+    std::string listOfRawMaterial[3] = {"onion", "salt", "letuce"};
+    //     5) list of menu
+    std::string listOfMenul[3] = {"Sweedish Meatball", "Fish and Chips",
+                                  "Sirloin Steak"};
+    // 3 things it can do:
+    //     1) made food for customer
+    void madeFood(std::string orderedMenu, int totalOrder);
+    //     2) charge customer
+    double customerBilling(int numOrderedMenu, int numCustomer,
+                           float price); // return     customer billing
+    //     3) serving customer
+    void servingCustomer(int orderNumber, std::string orderedMenu);
   };
-    
+
   // 3 things it can do:
   //     1) Delivery order to customer
-  void deliverToCustomer (int totalOrder, std::string customerDetail, std::string deliveryAddress);
+  void deliverToCustomer(int totalOrder, std::string customerDetail,
+                         std::string deliveryAddress);
   //     2) showcase room setting
-  void showCaseRoomSetting (int roomSize, std::string roomName, std::string targetCustomer);
+  void showCaseRoomSetting(int roomSize, std::string roomName,
+                           std::string targetCustomer);
   //     3) return articles
-  void returnArticle(std::string articleName, std::time_base returnTime, int receiptNum, std::string customerName);  
+  void returnArticle(std::string articleName, std::time_base returnTime,
+                     int receiptNum, std::string customerName);
 };
 
 /*
@@ -1589,61 +1599,114 @@ struct CarWash {
   // 5) a member variable whose type is a UDT.
   Car carBeingServiced; // Notice that this is written AFTER `struct Car { ...
                         // };
+};
+/*
+A Note regarding functions that use UDTs in their parameter list:
+Pay attention to the member functions that take an instance of 'Car'
+Notice that there is a member variable of the same type.
 
-  /*
-  A Note regarding functions that use UDTs in their parameter list:
-  Pay attention to the member functions that take an instance of 'Car'
-  Notice that there is a member variable of the same type.
+It makes sense to pass a Car to the function 'washAndWaxCar' because car
+washes service MANY cars However, they only service ONE car at a time. the
+carBeingServiced's value would change every time you wash and wax the car.
 
-  It makes sense to pass a Car to the function 'washAndWaxCar' because car
-  washes service MANY cars However, they only service ONE car at a time. the
-  carBeingServiced's value would change every time you wash and wax the car.
+I see many students who write code emulating this format, but their usage does
+not make logical sense. Consider the following snippet:
 
-  I see many students who write code emulating this format, but their usage does
-  not make logical sense. Consider the following snippet:
+struct SoccerTeam
+{
+    struct Manager
+    {
+        ...
+    };
 
-  struct SoccerTeam
-  {
-      struct Manager
-      {
-          ...
-      };
+    // train their skills
+    void trainPlayerSkills(Manager managerA);
 
-      // train their skills
-      void trainPlayerSkills(Manager managerA);
+    Manager teamManager;
+};
 
-      Manager teamManager;
+It does not make sense to pass in a new Manager whenever you are going to
+train your team players. Soccer teams have ONE manager.
+
+a much more relevant usage would be adding a member function that hires a new
+manager:
+
+struct SoccerTeam
+{
+    struct Manager
+    {
+        ...
+    };
+
+    void hireNewManager(Manager newManager);
+
+    Manager teamManager;
+};
+
+We can safely assume that the 'Manager' instance that is being passed to that
+function will be replacing the current 'teamManager' variable without looking
+at any other code. This is because the function name and function argument
+clearly indicate what they are/what they do.
+
+Your function names and parameter names should make LOGICAL SENSE.
+Readers of your code should be able to INTUITIVELY understand what your
+function implementations will do without actually seeing the implementations.
+
+Keep this in mind when you define your UDTs in this project part.
+*/
+
+// answer
+struct IKEAStore {
+  // 5 properties:
+  //     1) list of article
+  std::string listOfArticle[3] = {"MALM", "POANG", "LERBERG"};
+  //     2) number of co worker
+  int numOfCoWorker = 1200;
+  //     3) average revenue per day
+  float avgRevenuePerDay = 200000.234f;
+  //     4) number of stores
+  int numOfStores = 7;
+
+  struct Restaurant {
+    //     1) number of waiter
+    int numOfWaiter = 7;
+    //     2) count of revenue per day
+    float revenuePerDay = 12500.50f;
+    //     3) number of chef
+    int numOfChef = 2;
+    //     4) list of raw material
+    std::string listOfRawMaterial[3] = {"onion", "salt", "letuce"};
+    //     5) list of menu
+    std::string listOfMenul[3] = {"Sweedish Meatball", "Fish and Chips",
+                                  "Sirloin Steak"};
+    // 3 things it can do:
+    //     1) made food for customer
+    void madeFood(std::string orderedMenu, int totalOrder);
+    //     2) charge customer
+    double customerBilling(int numOrderedMenu, int numCustomer,
+                           float price); // return     customer billing
+    //     3) serving customer
+    void servingCustomer(int orderNumber, std::string orderedMenu);
   };
+  // 3 things it can do:
+  //     1) Delivery order to customer
+  void deliverToCustomer(int totalOrder, std::string customerDetail,
+                         std::string deliveryAddress);
+  //     2) showcase room setting
+  void showCaseRoomSetting(int roomSize, std::string roomName,
+                           std::string targetCustomer);
+  //     3) return articles
+  void returnArticle(std::string articleName, std::time_base returnTime,
+                     int receiptNum, std::string customerName);
+  //     4) contactless ordering food
+  void contactlessOrderingFood(Restaurant ikeaCustResto, std::string foodMenu,
+                               int quantity, std::string custName);
 
-  It does not make sense to pass in a new Manager whenever you are going to
-  train your team players. Soccer teams have ONE manager.
+  //    5) fulfillment food supply on Store
+  void foodFulfillment(Restaurant ikeaCustResto,
+                       std::string listOfOrderingFood[]);
 
-  a much more relevant usage would be adding a member function that hires a new
-  manager:
-
-  struct SoccerTeam
-  {
-      struct Manager
-      {
-          ...
-      };
-
-      void hireNewManager(Manager newManager);
-
-      Manager teamManager;
-  };
-
-  We can safely assume that the 'Manager' instance that is being passed to that
-  function will be replacing the current 'teamManager' variable without looking
-  at any other code. This is because the function name and function argument
-  clearly indicate what they are/what they do.
-
-  Your function names and parameter names should make LOGICAL SENSE.
-  Readers of your code should be able to INTUITIVELY understand what your
-  function implementations will do without actually seeing the implementations.
-
-  Keep this in mind when you define your UDTs in this project part.
-  */
+  Restaurant listOfIKEAFoodRestaurant[7];
 };
 /*
 =================
