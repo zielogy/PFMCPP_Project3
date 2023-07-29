@@ -206,23 +206,23 @@ Part 1b - Step 2: Assignment
 
 Thing 1) F1 Race
 5 properties:
-    1) number of car brand participate
-    2) amount of viewer per race
-    3) number of circuit
-    4) total racer participate
-    5) total of engineer per car
+    1) number of car brand participate (int)
+    2) amount of viewer per race (int)
+    3) number of circuit (int)
+    4) total racer participate (int)
+    5) total of engineer per car (int)
 3 things it can do:
-    1) generate revenue from race
-    2) do race
-    3) press confrence after race
+    1) generate revenue from race 
+    2) do race 
+    3) press confrence after race 
 
 Thing 2) Restaurant
 5 properties:
-    1) number of waiter
-    2) count of revenue per day
-    3) number of chef
-    4) list of raw material
-    5) list of menu
+    1) number of waiter (int)
+    2) count of revenue per day (float)
+    3) number of chef (int)
+    4) raw material (std::string)
+    5) menu (std::string)
 3 things it can do:
     1) made food for customer
     2) charge customer
@@ -230,11 +230,11 @@ Thing 2) Restaurant
 
 Thing 3) IKEA Store
 5 properties:
-    1) list of article
-    2) number of co worker
-    3) average revenue per day
-    4) number of stores
-    5) list of Food menu
+    1) article no (int)
+    2) number of co worker (int)
+    3) average revenue per day (double)
+    4) number of stores (int)
+    5) food menu (std::string)
 3 things it can do:
     1) Delivery order to customer
     2) showcase room setting
@@ -242,11 +242,11 @@ Thing 3) IKEA Store
 
 Thing 4) Hotel
 5 properties:
-    1) number of rooms
-    2) list of hotel menu
-    3) total of co worker
-    4) count of smoking room
-    5) average visit per day
+    1) number of rooms (int)
+    2) hotel menu (std::string)
+    3) total of co worker (int)
+    4) count of smoking room (int)
+    5) average visit per day (int)
 3 things it can do:
     1) provide room service
     2) book room for stay
@@ -329,17 +329,6 @@ example:
         Brightness (double)
         area in cm2 (int)
         brand (std::string)
-*/
-
-/*
-Answer:
-    POS Cashier:
-        number of registered article (int)
-        list of article name (std:string)
-        calculate today transaction (float)
-        check current stock of article (int)
-        calculate top selling article (int)
-
 */
 
 /*
