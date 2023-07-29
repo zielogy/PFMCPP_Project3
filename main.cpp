@@ -638,15 +638,22 @@ described in the Readme.MD
 struct F1Race
 {
    
-  int numCarBrand = 12;
+    int numCarBrand = 12;
   
-  int amtViewerPerRace = 10000;
+    int amtViewerPerRace = 10000;
   
-  int numOfCircuit = 20;
+    int numOfCircuit = 20;
   
-  int totalRacer = 24;
+    int totalRacer = 24;
  
-  int numOfEngineerPerCar = 50;
+    int numOfEngineerPerCar = 50;
+
+    //function
+    double calcRevenuePerRace(int numViewer, double incSponsorship); // return total revenue per race
+    //     2) do race
+    void doRace();
+    //     3) press confrence after race
+    void pressConference();
 };
 /*
 Thing 1) F1 Race
@@ -665,16 +672,24 @@ Thing 1) F1 Race
 struct Restaurant
 {
 
-  int numOfWaiter = 7;
+    int numOfWaiter = 7;
 
-  float revenuePerDay = 12500.50f;
+    float revenuePerDay = 12500.50f;
 
-  int numOfChef = 2;
+    int numOfChef = 2;
 
-  std::string rawMaterial = "salt";
+    std::string rawMaterial = "salt";
 
-  std::string menu = "fried rice";
+    std::string menu = "fried rice";
+
+    void madeFood(std::string orderedMenu, int totalOrder);
+
+    double customerBilling(int numOrderedMenu, int numCustomer,
+                            float price); // return customer billing
+
+    void servingCustomer(int orderNumber, std::string orderedMenu);
 };
+
 /*
 Thing 2) Restaurant
 5 properties:
@@ -690,15 +705,52 @@ Thing 2) Restaurant
 */
 struct IKEAStore 
 {
-  int artNo = 19240788;
+    int artNo = 19240788;
 
-  int numOfCoWorker = 1200;
+    int numOfCoWorker = 1200;
 
-  double avgRevenuePerDay = 200000.234123;
+    double avgRevenuePerDay = 200000.234123;
 
-  int numOfStores = 7;
+    int numOfStores = 7;
 
-  std::string foodMenu = "Sweedish Meatball";
+    std::string foodMenu = "Sweedish Meatball";
+    
+    //Nested class
+    struct IKEACafe
+    {
+        std::string storeName = "Alam Sutera";
+    
+        int numOfChair = 80;
+
+        int totalVariantMenu = 30;
+
+        std::string beverageMenu = "Ice Americano";
+
+        int coWorkerPerShift = 2;
+
+        float calcTotalOrder (std::string menu, int quantity, float price); //return total order price from cust
+
+        void makeOrder (int orderID, std::string menu, int quantity);
+
+        void changeCoWorkerShift();
+    
+    };
+
+    void deliverToCustomer(int totalOrder, std::string customerDetail,
+                           std::string deliveryAddress);
+    
+    void showCaseRoomSetting(int roomSize, std::string roomName,
+                             std::string targetCustomer);
+ 
+    void returnArticle(std::string articleName, std::time_base returnTime,
+                       int receiptNum, std::string customerName);
+    
+    //UDT function
+    IKEACafe cafe;
+
+    void contactlessFoodOrdering (IKEACafe cafe, std::string beverageMenu, int quantity,
+                                    std::string customerName);
+    
 };
 /*
 Thing 3) IKEA Store
@@ -715,15 +767,22 @@ Thing 3) IKEA Store
 */
 struct Hotel 
 {
-  int numOfRooms = 70;
+    int numOfRooms = 70;
 
-  std::string hotelMenu = "Tuna sandwich";
+    std::string hotelMenu = "Tuna sandwich";
 
-  int totalCoWorker = 100;
+    int totalCoWorker = 100;
 
-  int cntSmookingRoom = 10;
+    int cntSmookingRoom = 10;
 
-  int avgVisitPerDay = 40;
+    int avgVisitPerDay = 40;
+     
+    void roomService(int roomNumber, std::string requestedService);
+  
+    void bookRoom(int roomNumber, std::time_base date, std::string visitorName,
+                    float price);
+ 
+    void reserveRestaurant(std::string customerName, int numofCustomer);
 };
 /*
 Thing 4) Hotel
@@ -740,15 +799,22 @@ Thing 4) Hotel
 */
 struct BarcodeScanner 
 {
-  int infraredType = 1;
+    int infraredType = 1;
 
-  int height = 3;
+    int height = 3;
 
-  int width = 2;
+    int width = 2;
 
-  float sensitivity = 0.75f;
+    float sensitivity = 0.75f;
 
-  std::string bom = "Plastic";
+    std::string bom = "Plastic";
+    
+    void turnOn();
+  
+    void configureSensitivity(int newNumber);
+
+    bool connectingStatus(int portNumber); // return status connection with Computer
+    
 };
 /*
 Thing 5) barcode scanner
@@ -765,15 +831,22 @@ Thing 5) barcode scanner
 */
 struct CustomerPoleDisplay 
 {
-  int screenResolution = 2160;
+    int screenResolution = 2160;
 
-  int height = 10;
+    int height = 10;
 
-  int width = 3;
+    int width = 3;
 
-  float powerConsumption = 10.2f;
+    float powerConsumption = 10.2f;
 
-  std::string brand = "Dell";
+    std::string brand = "Dell";
+
+
+    void textToDisplay(std::string text);
+
+    bool checkConnection(int portNumber); // return status connection with POS
+
+    void turnOn();
 };
 /*
 Thing 6) customer pole display
@@ -790,15 +863,22 @@ Thing 6) customer pole display
 */
 struct MainPOSDisplay 
 {
-  int screenResolution = 2160;
+    int screenResolution = 2160;
 
-  int height = 10;
+    int height = 10;
 
-  int width = 3;
+    int width = 3;
 
-  int screenRatio = 1;
+    int screenRatio = 1;
 
-  float brightnessLevel = 80.1f;
+    float brightnessLevel = 80.1f;
+    
+    void adjResolution(int newValue);
+
+    void adjBrightness(int newValue);
+
+    bool checkConnection(int portNumber); // return connection status to computer
+    
 };
 /*
 Thing 7) main POS display
@@ -815,15 +895,21 @@ Thing 7) main POS display
 */
 struct ReceiptPrinter 
 {
-  int height = 5;
+    int height = 5;
 
-  int width = 7;
+    int width = 7;
 
-  int paperRollSize = 4;
+    int paperRollSize = 4;
 
-  float powerConsumption = 10.f;
+    float powerConsumption = 10.f;
 
-  std::string buttonType = "plastic";
+    std::string buttonType = "plastic";
+
+    void turnOn();
+
+    void printReceipt(std::string orderDetail);
+    
+    bool conectToPOS(int portNumber); // return connection status to POS
 };
 /*
 Thing 8) receipt printer
@@ -840,15 +926,21 @@ Thing 8) receipt printer
 */
 struct CashDrawer 
 {
-  int ejectorType = 2;
+    int ejectorType = 2;
 
-  float compartmentSize = 3.02f;
+    float compartmentSize = 3.02f;
 
-  int keyType = 3;
+    int keyType = 3;
 
-  float moutingSize = 0.2f;
+    float moutingSize = 0.2f;
 
-  float braketSize = 0.03f;
+    float braketSize = 0.03f;
+
+    float putMoney(float money); // return total balance on cash drawer
+
+    void openCashDrawer();
+  
+    bool conectToPOS(int portNumber); // return connection status to POS
 };
 /*
 Thing 9) cash drawer
@@ -865,16 +957,23 @@ Thing 9) cash drawer
 */
 struct POS 
 {
-  //     1) barcode scanner type
-  std::string barcodeScannerType = "gun";
-  //     2) customer display type
-  std::string customerDisplayType = "3 inch customer pole display";
-  //     3) main display type
-  std::string mainDisplayType = "14 inch screen POS display";
-  //     4) receipt printer brand
-  std::string receiptPrinterBrand = "Dell";
-  //     5) cash drawer type
-  std::string cashDrawerType = "Medium Duty";
+    //     1) barcode scanner type
+    std::string barcodeScannerType = "gun";
+    //     2) customer display type
+    std::string customerDisplayType = "3 inch customer pole display";
+    //     3) main display type
+    std::string mainDisplayType = "14 inch screen POS display";
+    //     4) receipt printer brand
+    std::string receiptPrinterBrand = "Dell";
+    //     5) cash drawer type
+    std::string cashDrawerType = "Medium Duty";
+
+    //     1) Input transaction
+    void inputTransaction(int articleNumber, float price, int quantity);
+    //     2) print reciept
+    void printReceipt(std::string orderDetail[]);
+    //     3) open cash drawer
+    void openCashDrawer();
 };
 /*
 Thing 10) POS
@@ -1007,218 +1106,6 @@ struct CarWash {
   void detailInterior();
 };
 
-// Answer
-struct F1Race {
-  //     1) number of car brand participate
-  int numCarBrand = 12;
-  //     2) amount of viewer per race
-  int amtViewerPerRace = 10000;
-  //     3) number of circuit
-  int numOfCircuit = 20;
-  //     4) total racer participate
-  int totalRacer = 24;
-  //     5) total of engineer per car
-  int numOfEngineerPerCar = 50;
-  //     3 things it can do:
-  //     1) generate revenue from race
-  double
-  calcRevenuePerRace(int numViewer,
-                     double incSponsorship); // return total revenue per race
-  //     2) do race
-  void doRace();
-  //     3) press confrence after race
-  void pressConference();
-};
-
-struct Restaurant {
-  //     1) number of waiter
-  int numOfWaiter = 7;
-  //     2) count of revenue per day
-  float revenuePerDay = 12500.50f;
-  //     3) number of chef
-  int numOfChef = 2;
-  //     4) list of raw material
-  std::string listOfRawMaterial[3] = {"onion", "salt", "letuce"};
-  //     5) list of menu
-  std::string listOfMenul[3] = {"fried rice", "spaghetti", "letuce"};
-  // 3 things it can do:
-  //     1) made food for customer
-  void madeFood(std::string orderedMenu, int totalOrder);
-  //     2) charge customer
-  double customerBilling(int numOrderedMenu, int numCustomer,
-                         float price); // return customer     billing
-  //     3) serving customer
-  void servingCustomer(int orderNumber, std::string orderedMenu);
-};
-
-struct IKEAStore {
-  // 5 properties:
-  //     1) list of article
-  std::string listOfArticle[3] = {"MALM", "POANG", "LERBERG"};
-  //     2) number of co worker
-  int numOfCoWorker = 1200;
-  //     3) average revenue per day
-  float avgRevenuePerDay = 200000.234f;
-  //     4) number of stores
-  int numOfStores = 7;
-  //     5) list of Food menu
-  std::string listOfFoodMenu[3] = {"Sweedish Meatball", "Fish and Chips",
-                                   "Sirloin Steak"};
-  // 3 things it can do:
-  //     1) Delivery order to customer
-  void deliverToCustomer(int totalOrder, std::string customerDetail,
-                         std::string deliveryAddress);
-  //     2) showcase room setting
-  void showCaseRoomSetting(int roomSize, std::string roomName,
-                           std::string targetCustomer);
-  //     3) return articles
-  void returnArticle(std::string articleName, std::time_base returnTime,
-                     int receiptNum, std::string customerName);
-};
-
-struct Hotel {
-  //     1) number of rooms
-  int numOfRooms = 70;
-  //     2) list of hotel menu
-  std::string listOfHotelMenu[3] = {"Tuna sandwich", "Fish and Chips",
-                                    "Sirloin Steak"};
-  //     3) total of co worker
-  int totalCoWorker = 100;
-  //     4) count of smoking room
-  int cntSmookingRoom = 10;
-  //     5) average occupancy per day
-  int avgVisitPerDay = 40;
-  // 3 things it can do:
-  //     1) provide room service
-  void roomService(int roomNumber, std::string requestedService);
-  //     2) book room for stay
-  void bookRoom(int roomNumber, std::time_base date, std::string visitorName,
-                float price);
-  //     3) reserve hotel restaurant
-  void reserveRestaurant(std::string customerName, int numofCustomer);
-};
-
-struct barcodeScanner {
-  //     1) infrared scanner type
-  std::string infraredType = "active sensor";
-  //     2) height in cm
-  int height = 3;
-  //     3) width in cm
-  int width = 2;
-  //     4) sensitivity
-  float sensitivity = 0.75f;
-  //     5) build of material
-  std::string bom = "Plastic";
-  // 3 things it can do:
-  //     1) swith on infrared scanner
-  void turnOn();
-  //     2) configure sensitivity
-  void configureSensitivity(int newNumber);
-  //     3) connect with computer
-  bool
-  connectingStatus(int portNumber); // return status connection with Computer
-};
-
-struct customerPoleDisplay {
-  //     1) screen resolution
-  int screenResolution = 2160;
-  //     2) height in cm
-  int height = 10;
-  //     3) width in cm
-  int width = 3;
-  //     4) power consumption (wh)
-  float powerConsumption = 10.f;
-  //     5) brand
-  std::string brand = "Dell";
-  // 3 things it can do:
-  //     1) configure text to display
-  void textToDisplay(std::string text);
-  //     2) check connection with POS
-  bool checkConnection(int portNumber); // return status connection with POS
-  //     3) turn on/off
-  void turnOn();
-};
-
-struct mainPOSDisplay {
-  //     1) screen resolution
-  int screenResolution = 2160;
-  //     2) height in cm
-  int height = 10;
-  //     3) width in cm
-  int width = 3;
-  //     4) screen to bezel ratio
-  int screenRatio = 1;
-  //     5) brightness level
-  float brightnessLevel = 80.f;
-  // 3 things it can do:
-  //     1) adjust screen resolution
-  void adjResolution(int newValue);
-  //     2) adjust brightness level
-  void adjBrightness(int newValue);
-  //     3) connect to computer
-  bool checkConnection(int portNumber); // return connection status to computer
-};
-
-struct receiptPrinter {
-  //     1) height in cm
-  int height = 5;
-  //     2) weight in cm
-  int width = 7;
-  //     3) paper roll size in cm
-  int paperRollSize = 4;
-  //     4) power consumption (wh)
-  float powerConsumption = 10.f;
-  //     5) button type
-  std::string buttonType = "plastic";
-  // 3 things it can do:
-  //     1) turn on/off
-  void turnOn();
-  //     2) print receipt
-  void printReceipt(std::string orderDetail[]);
-  //     3) connect to POS
-  bool conectToPOS(int portNumber); // return connection status to POS
-};
-
-struct cashDrawer {
-  //     1) ejector type
-  std::string ejectorType = "Plastic";
-  //     2) compartment size in cm
-  int compartmentSize = 3;
-  //     3) key type
-  std::string keyType = "Mechanical";
-  //     4) mounting size in cm
-  double moutingSize = 0.2;
-  //     5) braket size in cm
-  double braketSize = 0.03;
-  // 3 things it can do:
-  //     1) put money
-  float putMoney(float money); // return total balance on cash drawer
-  //     2) open cash drawer
-  void openCashDrawer();
-  //     3) connect to POS
-  bool conectToPOS(int portNumber); // return connection status to POS
-};
-
-struct POS {
-  //     1) barcode scanner type
-  std::string barcodeScannerType = "gun";
-  //     2) customer display type
-  std::string customerDisplayType = "3 inch customer pole display";
-  //     3) main display type
-  std::string mainDisplayType = "14 inch screen POS display";
-  //     4) receipt printer brand
-  std::string receiptPrinterBrand = "Dell";
-  //     5) cash drawer type
-  std::string cashDrawerType = "Medium Duty";
-
-  // 3 things it can do:
-  //     1) Input transaction
-  void inputTransaction(int articleNumber, float price, int quantity);
-  //     2) print reciept
-  void printReceipt(std::string orderDetail[]);
-  //     3) open cash drawer
-  void openCashDrawer();
-};
 
 /*
 =================
@@ -1289,49 +1176,6 @@ struct CarWash {
   void detailInterior();
 };
 
-struct IKEAStore {
-  //     1) list of article
-  std::string listOfArticle[3] = {"MALM", "POANG", "LERBERG"};
-  //     2) number of co worker
-  int numOfCoWorker = 1200;
-  //     3) average revenue per day
-  float avgRevenuePerDay = 200000.234f;
-  //     4) number of stores
-  int numOfStores = 7;
-
-  struct Restaurant {
-    //     1) number of waiter
-    int numOfWaiter = 7;
-    //     2) count of revenue per day
-    float revenuePerDay = 12500.50f;
-    //     3) number of chef
-    int numOfChef = 2;
-    //     4) list of raw material
-    std::string listOfRawMaterial[3] = {"onion", "salt", "letuce"};
-    //     5) list of menu
-    std::string listOfMenul[3] = {"Sweedish Meatball", "Fish and Chips",
-                                  "Sirloin Steak"};
-    // 3 things it can do:
-    //     1) made food for customer
-    void madeFood(std::string orderedMenu, int totalOrder);
-    //     2) charge customer
-    double customerBilling(int numOrderedMenu, int numCustomer,
-                           float price); // return     customer billing
-    //     3) serving customer
-    void servingCustomer(int orderNumber, std::string orderedMenu);
-  };
-
-  // 3 things it can do:
-  //     1) Delivery order to customer
-  void deliverToCustomer(int totalOrder, std::string customerDetail,
-                         std::string deliveryAddress);
-  //     2) showcase room setting
-  void showCaseRoomSetting(int roomSize, std::string roomName,
-                           std::string targetCustomer);
-  //     3) return articles
-  void returnArticle(std::string articleName, std::time_base returnTime,
-                     int receiptNum, std::string customerName);
-};
 
 /*
 =================
@@ -1459,59 +1303,6 @@ function implementations will do without actually seeing the implementations.
 Keep this in mind when you define your UDTs in this project part.
 */
 
-// answer
-struct IKEAStore {
-  // 5 properties:
-  //     1) list of article
-  std::string listOfArticle[3] = {"MALM", "POANG", "LERBERG"};
-  //     2) number of co worker
-  int numOfCoWorker = 1200;
-  //     3) average revenue per day
-  float avgRevenuePerDay = 200000.234f;
-  //     4) number of stores
-  int numOfStores = 7;
-
-  struct Restaurant {
-    //     1) number of waiter
-    int numOfWaiter = 7;
-    //     2) count of revenue per day
-    float revenuePerDay = 12500.50f;
-    //     3) number of chef
-    int numOfChef = 2;
-    //     4) list of raw material
-    std::string listOfRawMaterial[3] = {"onion", "salt", "letuce"};
-    //     5) list of menu
-    std::string listOfMenul[3] = {"Sweedish Meatball", "Fish and Chips",
-                                  "Sirloin Steak"};
-    // 3 things it can do:
-    //     1) made food for customer
-    void madeFood(std::string orderedMenu, int totalOrder);
-    //     2) charge customer
-    double customerBilling(int numOrderedMenu, int numCustomer,
-                           float price); // return     customer billing
-    //     3) serving customer
-    void servingCustomer(int orderNumber, std::string orderedMenu);
-  };
-  // 3 things it can do:
-  //     1) Delivery order to customer
-  void deliverToCustomer(int totalOrder, std::string customerDetail,
-                         std::string deliveryAddress);
-  //     2) showcase room setting
-  void showCaseRoomSetting(int roomSize, std::string roomName,
-                           std::string targetCustomer);
-  //     3) return articles
-  void returnArticle(std::string articleName, std::time_base returnTime,
-                     int receiptNum, std::string customerName);
-  //     4) contactless ordering food
-  void contactlessOrderingFood(Restaurant ikeaCustResto, std::string foodMenu,
-                               int quantity, std::string custName);
-
-  //    5) fulfillment food supply on Store
-  void foodFulfillment(Restaurant ikeaCustResto,
-                       std::string listOfOrderingFood[]);
-
-  Restaurant listOfIKEAFoodRestaurant[7];
-};
 /*
 =================
 Part 1e - Step 12: Commit
