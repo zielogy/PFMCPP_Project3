@@ -204,53 +204,7 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with
         'int float double bool char std::string'.
 
-Thing 1) F1 Race
-5 properties:
-    1) number of car brand participate (int)
-    2) amount of viewer per race (int)
-    3) number of circuit (int)
-    4) total racer participate (int)
-    5) total of engineer per car (int)
-3 things it can do:
-    1) generate revenue from race 
-    2) do race 
-    3) press confrence after race 
 
-Thing 2) Restaurant
-5 properties:
-    1) number of waiter (int)
-    2) count of revenue per day (float)
-    3) number of chef (int)
-    4) raw material (std::string)
-    5) menu (std::string)
-3 things it can do:
-    1) made food for customer
-    2) charge customer
-    3) serving customer
-
-Thing 3) IKEA Store
-5 properties:
-    1) article no (int)
-    2) number of co worker (int)
-    3) average revenue per day (double)
-    4) number of stores (int)
-    5) food menu (std::string)
-3 things it can do:
-    1) Delivery order to customer
-    2) showcase room setting
-    3) return articles
-
-Thing 4) Hotel
-5 properties:
-    1) number of rooms (int)
-    2) hotel menu (std::string)
-    3) total of co worker (int)
-    4) count of smoking room (int)
-    5) average visit per day (int)
-3 things it can do:
-    1) provide room service
-    2) book room for stay
-    3) reserve hotel restaurant
 */
 
 /*
@@ -448,6 +402,109 @@ example:
 object in plain English. Remember to pick properties that can be represented
 with 'int float double bool char std::string'.
 
+ */
+
+/*
+=================
+Part 1d - Step 3: Commit
+=================
+Now that you've made changes to the code, make a commit!
+Be sure to make the commit message meaningful.
+*/
+
+/*
+================
+Part 1d - Step 4: Assignment
+================
+    - write the name of the primitive type you'll be using after each property
+for UDTs 5 - 9.
+    - You already did this for UDTs 1-4 in Part 1c.
+    - Pick properties that can be represented with 'int float double bool char
+std::string'
+
+example:
+    Display:
+        Number of Pixels (int)
+        Amount of Power consumed (milliwatt-hours) (float)
+        Brightness (double)
+        width in cm (int)
+        height in cm (int)
+*/
+
+/*
+=================
+Part 1d - Step 5: Commit
+=================
+Now that you've made changes to the code, make a commit!
+Be sure to make the commit message meaningful.
+*/
+
+/*
+===================
+Part 1d - Step 6: assignment
+===================
+You've just defined 10 UDTs!
+4 of them are unrelated (UDTs 1-4).
+5 of them form the sub-objects that make up the 10th UDT.
+
+MOVE THEM to the space below this block comment and put them in numerical order
+(1 - 10).
+    DO NOT COPY.
+    CUT AND PASTE.
+    I do not want to see 2 copies of your Plain-English UDTs.
+    I only want to see the 10 UDTs written BELOW this block comment, in
+numerical order (1 - 10). simply CUT and PASTE them in the space provided below:
+*/
+
+/*
+Thing 1) F1 Race
+5 properties:
+    1) number of car brand participate (int)
+    2) amount of viewer per race (int)
+    3) number of circuit (int)
+    4) total racer participate (int)
+    5) total of engineer per car (int)
+3 things it can do:
+    1) generate revenue from race 
+    2) do race 
+    3) press confrence after race 
+
+Thing 2) Restaurant
+5 properties:
+    1) number of waiter (int)
+    2) count of revenue per day (float)
+    3) number of chef (int)
+    4) raw material (std::string)
+    5) menu (std::string)
+3 things it can do:
+    1) made food for customer
+    2) charge customer
+    3) serving customer
+
+Thing 3) IKEA Store
+5 properties:
+    1) article no (int)
+    2) number of co worker (int)
+    3) average revenue per day (double)
+    4) number of stores (int)
+    5) food menu (std::string)
+3 things it can do:
+    1) Delivery order to customer
+    2) showcase room setting
+    3) return articles
+
+Thing 4) Hotel
+5 properties:
+    1) number of rooms (int)
+    2) hotel menu (std::string)
+    3) total of co worker (int)
+    4) count of smoking room (int)
+    5) average visit per day (int)
+3 things it can do:
+    1) provide room service
+    2) book room for stay
+    3) reserve hotel restaurant
+
 Thing 5) barcode scanner
 5 properties:
     1) infrared scanner type (int)
@@ -507,180 +564,6 @@ Thing 9) cash drawer
     1) put money
     2) open cash drawer
     3) connect to POS
- */
-
-/*
-=================
-Part 1d - Step 3: Commit
-=================
-Now that you've made changes to the code, make a commit!
-Be sure to make the commit message meaningful.
-*/
-
-/*
-================
-Part 1d - Step 4: Assignment
-================
-    - write the name of the primitive type you'll be using after each property
-for UDTs 5 - 9.
-    - You already did this for UDTs 1-4 in Part 1c.
-    - Pick properties that can be represented with 'int float double bool char
-std::string'
-
-example:
-    Display:
-        Number of Pixels (int)
-        Amount of Power consumed (milliwatt-hours) (float)
-        Brightness (double)
-        width in cm (int)
-        height in cm (int)
-*/
-
-/*
-=================
-Part 1d - Step 5: Commit
-=================
-Now that you've made changes to the code, make a commit!
-Be sure to make the commit message meaningful.
-*/
-
-/*
-===================
-Part 1d - Step 6: assignment
-===================
-You've just defined 10 UDTs!
-4 of them are unrelated (UDTs 1-4).
-5 of them form the sub-objects that make up the 10th UDT.
-
-MOVE THEM to the space below this block comment and put them in numerical order
-(1 - 10).
-    DO NOT COPY.
-    CUT AND PASTE.
-    I do not want to see 2 copies of your Plain-English UDTs.
-    I only want to see the 10 UDTs written BELOW this block comment, in
-numerical order (1 - 10). simply CUT and PASTE them in the space provided below:
-*/
-
-/*
-Thing 1) F1 Race
-5 properties:
-    1) number of car brand participate
-    2) amount of viewer per race
-    3) number of circuit
-    4) total racer participate
-    5) total of engineer per car
-3 things it can do:
-    1) generate revenue from race
-    2) do race
-    3) press confrence after race
-
-Thing 2) Restaurant
-5 properties:
-    1) number of waiter
-    2) count of revenue per day
-    3) number of chef
-    4) list of raw material
-    5) list of menu
-3 things it can do:
-    1) made food for customer
-    2) charge customer
-    3) serving customer
-
-Thing 3) IKEA Store
-5 properties:
-    1) list of article
-    2) number of co worker
-    3) average revenue per day
-    4) number of stores
-    5) list of Food menu
-3 things it can do:
-    1) Delivery order to customer
-    2) showcase room setting
-    3) return articles
-
-Thing 4) Hotel
-5 properties:
-    1) number of rooms
-    2) list of hotel menu
-    3) total of co worker
-    4) count of smoking room
-    5) average occupancy per day
-3 things it can do:
-    1) provide room service
-    2) book room for stay
-    3) reserve hotel restaurant
-
-Thing 5) barcode scanner
-5 properties:
-    1) infrared scanner type
-    2) height in cm
-    3) width in cm
-    4) sensitivity
-    5) build of material
-3 things it can do:
-    1) swith on infrared scanner
-    2) configure sensitivity
-    3) connect with computer
-
-Thing 6) customer pole display
-5 properties:
-    1) screen resolution
-    2) height in cm
-    3) width in cm
-    4) power consumption (wh)
-    5) brand
-3 things it can do:
-    1) configure text to display
-    2) check connection with POS
-    3) turn on/off
-
-Thing 7) main POS display
-5 properties:
-    1) screen resolution
-    2) height in cm
-    3) width in cm
-    4) screen to bezel ratio
-    5) brightness level
-3 things it can do:
-    1) adjust screen resolution
-    2) adjust brightness level
-    3) connect to computer
-
-Thing 8) receipt printer
-5 properties:
-    1) height in cm
-    2) weight in cm
-    3) paper roll size
-    4) power consumption (wh)
-    5) button type
-3 things it can do:
-    1) turn on/off
-    2) print receipt
-    3) connect to POS
-
-Thing 9) cash drawer
-5 properties:
-    1) ejector type
-    2) compartment size
-    3) key type
-    4) mounting size
-    5) braket size
-3 things it can do:
-    1) put money
-    2) open cash drawer
-    3) connect to POS
-
-Thing 10) POS
-5 properties:
-    1) barcode scanner
-    2) customer display
-    3) main display
-    4) receipt printer
-    5) cash drawer
-3 things it can do:
-    1) Input transaction
-    2) print reciept
-    3) open cash drawer
 */
 
 /*
