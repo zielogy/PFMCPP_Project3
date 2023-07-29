@@ -450,11 +450,11 @@ with 'int float double bool char std::string'.
 
 Thing 5) barcode scanner
 5 properties:
-    1) infrared scanner type
-    2) height in cm
-    3) width in cm
-    4) sensitivity
-    5) build of material
+    1) infrared scanner type (int)
+    2) height in cm (int)
+    3) width in cm (int)
+    4) sensitivity (float)
+    5) build of material (std::string)
 3 things it can do:
     1) swith on infrared scanner
     2) configure sensitivity
@@ -462,11 +462,11 @@ Thing 5) barcode scanner
 
 Thing 6) customer pole display
 5 properties:
-    1) screen resolution
-    2) height in cm
-    3) width in cm
-    4) power consumption (wh)
-    5) brand
+    1) screen resolution (int)
+    2) height in cm (int)
+    3) width in cm (int)
+    4) power consumption (wh) (float)
+    5) brand (std::string)
 3 things it can do:
     1) configure text to display
     2) check connection with POS
@@ -474,11 +474,11 @@ Thing 6) customer pole display
 
 Thing 7) main POS display
 5 properties:
-    1) screen resolution
-    2) height in cm
-    3) width in cm
-    4) screen to bezel ratio
-    5) brightness level
+    1) screen resolution (int)
+    2) height in cm (int)
+    3) width in cm (int)
+    4) screen to bezel ratio (int)
+    5) brightness level (float)
 3 things it can do:
     1) adjust screen resolution
     2) adjust brightness level
@@ -486,11 +486,11 @@ Thing 7) main POS display
 
 Thing 8) receipt printer
 5 properties:
-    1) height in cm
-    2) weight in cm
-    3) paper roll size
-    4) power consumption (wh)
-    5) button type
+    1) height in cm (int)
+    2) weight in cm (int)
+    3) paper roll size (float)
+    4) power consumption (wh) (int)
+    5) button type (int)
 3 things it can do:
     1) turn on/off
     2) print receipt
@@ -498,11 +498,11 @@ Thing 8) receipt printer
 
 Thing 9) cash drawer
 5 properties:
-    1) ejector type
-    2) compartment size
-    3) key type
-    4) mounting size
-    5) braket size
+    1) ejector type (int)
+    2) compartment size (float)
+    3) key type (int)
+    4) mounting size (float)
+    5) braket size (float)
 3 things it can do:
     1) put money
     2) open cash drawer
