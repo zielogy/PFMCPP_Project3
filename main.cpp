@@ -1069,26 +1069,13 @@ struct F1Race
  
     int numOfEngineerPerCar = 50;
 
-    //function
-    double calcRevenuePerRace(int numViewer, double incSponsorship); // return total revenue per race
-    //     2) do race
+    double calcRevenuePerRace(int numViewer, double incSponsorship); // return total revenue
+
     void doRace();
-    //     3) press confrence after race
+
     void pressConference();
 };
-/*
-Thing 1) F1 Race
-5 properties:
-    1) number of car brand participate (int)
-    2) amount of viewer per race (int)
-    3) number of circuit (int)
-    4) total racer participate (int)
-    5) total of engineer per car (int)
-3 things it can do:
-    1) generate revenue from race 
-    2) do race 
-    3) press confrence after race 
-*/
+
 
 struct Restaurant
 {
@@ -1111,19 +1098,7 @@ struct Restaurant
     void servingCustomer(int orderNumber, std::string orderedMenu);
 };
 
-/*
-Thing 2) Restaurant
-5 properties:
-    1) number of waiter (int)
-    2) count of revenue per day (float)
-    3) number of chef (int)
-    4) raw material (std::string)
-    5) menu (std::string)
-3 things it can do:
-    1) made food for customer
-    2) charge customer
-    3) serving customer
-*/
+
 struct IKEAStore 
 {
     int artNo = 19240788;
@@ -1173,19 +1148,7 @@ struct IKEAStore
                                     std::string customerName);
     
 };
-/*
-Thing 3) IKEA Store
-5 properties:
-    1) article no (int)
-    2) number of co worker (int)
-    3) average revenue per day (double)
-    4) number of stores (int)
-    5) food menu (std::string)
-3 things it can do:
-    1) Delivery order to customer
-    2) showcase room setting
-    3) return articles
-*/
+
 struct Hotel 
 {
     int numOfRooms = 70;
@@ -1205,19 +1168,7 @@ struct Hotel
  
     void reserveRestaurant(std::string customerName, int numofCustomer);
 };
-/*
-Thing 4) Hotel
-5 properties:
-    1) number of rooms (int)
-    2) hotel menu (std::string)
-    3) total of co worker (int)
-    4) count of smoking room (int)
-    5) average visit per day (int)
-3 things it can do:
-    1) provide room service
-    2) book room for stay
-    3) reserve hotel restaurant
-*/
+
 struct BarcodeScanner 
 {
     int infraredType = 1;
@@ -1237,19 +1188,7 @@ struct BarcodeScanner
     bool connectingStatus(int portNumber); // return status connection with Computer
     
 };
-/*
-Thing 5) barcode scanner
-5 properties:
-    1) infrared scanner type (int)
-    2) height in cm (int)
-    3) width in cm (int)
-    4) sensitivity (float)
-    5) build of material (std::string)
-3 things it can do:
-    1) swith on infrared scanner
-    2) configure sensitivity
-    3) connect with computer
-*/
+
 struct CustomerPoleDisplay 
 {
     int screenResolution = 2160;
@@ -1269,19 +1208,7 @@ struct CustomerPoleDisplay
 
     void turnOn();
 };
-/*
-Thing 6) customer pole display
-5 properties:
-    1) screen resolution (int)
-    2) height in cm (int)
-    3) width in cm (int)
-    4) power consumption (wh) (float)
-    5) brand (std::string)
-3 things it can do:
-    1) configure text to display
-    2) check connection with POS
-    3) turn on/off
-*/
+
 struct MainPOSDisplay 
 {
     int screenResolution = 2160;
@@ -1301,19 +1228,7 @@ struct MainPOSDisplay
     bool checkConnection(int portNumber); // return connection status to computer
     
 };
-/*
-Thing 7) main POS display
-5 properties:
-    1) screen resolution (int)
-    2) height in cm (int)
-    3) width in cm (int)
-    4) screen to bezel ratio (int)
-    5) brightness level (float)
-3 things it can do:
-    1) adjust screen resolution
-    2) adjust brightness level
-    3) connect to computer
-*/
+
 struct ReceiptPrinter 
 {
     int height = 5;
@@ -1332,19 +1247,7 @@ struct ReceiptPrinter
     
     bool conectToPOS(int portNumber); // return connection status to POS
 };
-/*
-Thing 8) receipt printer
-5 properties:
-    1) height in cm (int)
-    2) weight in cm (int)
-    3) paper roll size (float)
-    4) power consumption (wh) (int)
-    5) button type (int)
-3 things it can do:
-    1) turn on/off
-    2) print receipt
-    3) connect to POS
-*/
+
 struct CashDrawer 
 {
     int ejectorType = 2;
@@ -1363,46 +1266,24 @@ struct CashDrawer
   
     bool conectToPOS(int portNumber); // return connection status to POS
 };
-/*
-Thing 9) cash drawer
-5 properties:
-    1) ejector type (int)
-    2) compartment size (float)
-    3) key type (int)
-    4) mounting size (float)
-    5) braket size (float)
-3 things it can do:
-    1) put money
-    2) open cash drawer
-    3) connect to POS
-*/
+
 struct POS 
 {
-    BarcodeScanner scanner; // a member variabledeclaration of an instance of UDT 5
-    CustomerPoleDisplay poleDisplay; // a member variabledeclaration of an instance of UDT 6
-    MainPOSDisplay POSDisplay; // a member variabledeclaration of an instance of UDT 7
-    ReceiptPrinter receipt; // a member variabledeclaration of an instance of UDT 8
-    CashDrawer drawer; // a member variabledeclaration of an instance of UDT 9
+    BarcodeScanner scanner; 
+   
+    CustomerPoleDisplay poleDisplay; 
+    
+    MainPOSDisplay POSDisplay; 
+    
+    ReceiptPrinter receipt; 
+    
+    CashDrawer drawer; 
   
-    //     1) Input transaction
     void inputTransaction(int articleNumber, float price, int quantity);
-    //     2) print reciept
+   
     void printReceipt(int orderNumber, std::string orderDetail[]);
-    //     3) open cash drawer
+    
     void openCashDrawer();
 };
-/*
-Thing 10) POS
-5 properties:
-    1) barcode scanner
-    2) customer display
-    3) main display
-    4) receipt printer
-    5) cash drawer
-3 things it can do:
-    1) Input transaction
-    2) print reciept
-    3) open cash drawer
-*/
 
 int main() { std::cout << "good to go!" << std::endl; }
