@@ -1060,19 +1060,15 @@ struct F1Race
 {
    
     int numCarBrand = 12;
-  
     int amtViewerPerRace = 10000;
-  
     int numOfCircuit = 20;
-  
     int totalRacer = 24;
- 
     int numOfEngineerPerCar = 50;
 
     double calcRevenuePerRace(int numViewer, double incSponsorship); // return total revenue
-
+    
     void doRace();
-
+    
     void pressConference();
 };
 
@@ -1081,20 +1077,16 @@ struct Restaurant
 {
 
     int numOfWaiter = 7;
-
     float revenuePerDay = 12500.50f;
-
     int numOfChef = 2;
-
     std::string rawMaterial = "salt";
-
     std::string menu = "fried rice";
 
     void madeFood(std::string orderedMenu, int totalOrder);
-
+    
     double customerBilling(int numOrderedMenu, int numCustomer,
                             float price); // return customer billing
-
+    
     void servingCustomer(int orderNumber, std::string orderedMenu);
 };
 
@@ -1102,32 +1094,24 @@ struct Restaurant
 struct IKEAStore 
 {
     int artNo = 19240788;
-
     int numOfCoWorker = 1200;
-
     double avgRevenuePerDay = 200000.234123;
-
     int numOfStores = 7;
-
     std::string foodMenu = "Sweedish Meatball";
     
     //Nested class
     struct IKEACafe
     {
         std::string storeName = "Alam Sutera";
-    
         int numOfChair = 80;
-
         int totalVariantMenu = 30;
-
         std::string beverageMenu = "Ice Americano";
-
         int coWorkerPerShift = 2;
 
         float calcTotalOrder (std::string menu, int quantity, float price); //return total order price from cust
-
+        
         void makeOrder (int orderID, std::string menu, int quantity);
-
+        
         void changeCoWorkerShift();
     
     };
@@ -1152,13 +1136,9 @@ struct IKEAStore
 struct Hotel 
 {
     int numOfRooms = 70;
-
     std::string hotelMenu = "Tuna sandwich";
-
     int totalCoWorker = 100;
-
     int cntSmookingRoom = 10;
-
     int avgVisitPerDay = 40;
      
     void roomService(int roomNumber, std::string requestedService);
@@ -1172,13 +1152,9 @@ struct Hotel
 struct BarcodeScanner 
 {
     int infraredType = 1;
-
     int height = 3;
-
     int width = 2;
-
     float sensitivity = 0.75f;
-
     std::string bom = "Plastic";
     
     void turnOn();
@@ -1192,13 +1168,9 @@ struct BarcodeScanner
 struct CustomerPoleDisplay 
 {
     int screenResolution = 2160;
-
     int height = 10;
-
     int width = 3;
-
     float powerConsumption = 10.2f;
-
     std::string brand = "Dell";
 
 
@@ -1212,13 +1184,9 @@ struct CustomerPoleDisplay
 struct MainPOSDisplay 
 {
     int screenResolution = 2160;
-
     int height = 10;
-
     int width = 3;
-
     int screenRatio = 1;
-
     float brightnessLevel = 80.1f;
     
     void adjResolution(int newValue);
@@ -1232,13 +1200,9 @@ struct MainPOSDisplay
 struct ReceiptPrinter 
 {
     int height = 5;
-
     int width = 7;
-
     int paperRollSize = 4;
-
     float powerConsumption = 10.f;
-
     std::string buttonType = "plastic";
 
     void turnOn();
@@ -1251,15 +1215,11 @@ struct ReceiptPrinter
 struct CashDrawer 
 {
     int ejectorType = 2;
-
     float compartmentSize = 3.02f;
-
     int keyType = 3;
-
     float moutingSize = 0.2f;
-
     float braketSize = 0.03f;
-
+    
     float putMoney(float money); // return total balance on cash drawer
 
     void openCashDrawer();
@@ -1270,13 +1230,9 @@ struct CashDrawer
 struct POS 
 {
     BarcodeScanner scanner; 
-   
     CustomerPoleDisplay poleDisplay; 
-    
     MainPOSDisplay POSDisplay; 
-    
     ReceiptPrinter receipt; 
-    
     CashDrawer drawer; 
   
     void inputTransaction(int articleNumber, float price, int quantity);
