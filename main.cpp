@@ -108,31 +108,45 @@ struct CarWash
     You'll need to insert the Person struct from the video in the space below.
  */
 
-struct LeftFoot 
-{
-    int step;
-};
-struct RightFoot
-{ 
-    int step;
-};
 
 struct Person 
 {
+    int age = 0;
+    std::string name = "Bob";
+    int height = 0;
+    int shoesSize = 0;
+    int steps = 0;
     
-    LeftFoot leftFoot;
-    RightFoot rightFoot;
+    struct Foot
+    {
 
-    void stepForward(LeftFoot leftFoot, RightFoot rightFoot);
+        void stepForward(Person p) 
+        {
+            std::cout << "move ahead" << std::endl;
+            p.steps++;
+        }
+        int stepSize (Person p)
+        {
+            return p.steps;
+        }
+    };
 
-    int stepSize (LeftFoot leftFoot, RightFoot rightFoot);
+    Foot leftFoot, rightFoot;
 
-    void run();
+    void run(Person p, int distance, bool startWithRightFoot);
 };
 
-void Person::run() 
+void Person::run(Person p, int distance, bool startWithRightFoot) 
 {
-    
+    if (startWithRightFoot)
+    {
+        rightFoot.stepForward(p);
+        leftFoot.stepForward(p);
+    }
+    std::cout << "Step Size Left foot : " << leftFoot.stepSize(p) << std::endl;
+    std::cout << "Step Size right foot : " << rightFoot.stepSize(p) << std::endl;
+
+    std::cout << "Distance left : " << distance - rightFoot.stepSize(p) << std::endl;
 }
 
  /*
@@ -172,6 +186,27 @@ struct F1Race
     void pressConference();
 };
 
+double F1Race::calcRevenuePerRace(int numViewer, double incSponsorship)
+{
+    int ticketPrize = 100; //USD
+    numViewer = 1000;
+    incSponsorship = 1000000.03134; //income sponsorship per race
+
+    return (ticketPrize*numViewer) + incSponsorship;
+}
+
+void F1Race::doRace()
+{
+    std::cout << "Race Start!" << std::endl;
+    std::cout << "Race End!" << std::endl;
+}
+
+void F1Race::pressConference() 
+{
+    std::cout << "Race Montecarlo was fantastic! witht the wining team is Ferrari" << std::endl;
+}
+
+
 struct Restaurant
 {
 
@@ -184,11 +219,28 @@ struct Restaurant
     void madeFood(std::string orderedMenu, int totalOrder);
 
     double customerBilling(int numOrderedMenu, int numCustomer,
-                            float price); // return customer billing
+                            double price); // return customer billing
 
     void servingCustomer(int orderNumber, std::string orderedMenu);
 };
 
+void Restaurant::madeFood(std::string orderedMenu, int totalOrder)
+{
+    std::cout << "Ordered " << orderedMenu << " with total " << totalOrder << " dished has been made." << std::endl;
+}
+
+double Restaurant::customerBilling(int numOrderedMenu, int numCustomer, double price)
+{
+    double custNum = numCustomer*1.0;
+    double numOrder = numOrderedMenu*1.0;
+    return price*custNum*numOrder;
+}
+
+void Restaurant::servingCustomer(int orderNumber, std::string orderedMenu)
+{
+    std::cout << "Table 5 order number " << orderNumber << " with ordered Menu " << orderedMenu
+                << " been ready to serve" << std::endl;
+}
 
 struct IKEAStore 
 {
@@ -207,7 +259,7 @@ struct IKEAStore
         std::string beverageMenu = "Ice Americano";
         int coWorkerPerShift = 2;
 
-        float calcTotalOrder (std::string menu, int quantity, float price); //return total order price from cust
+        double calcTotalOrder (std::string menu, int quantity, double price); //return total order price from cust
 
         void makeOrder (int orderID, std::string menu, int quantity);
 
@@ -230,6 +282,43 @@ struct IKEAStore
     
 };
 
+double IKEAStore::IKEACafe::calcTotalOrder(std::string menu, int quantity, double price)
+{
+    double quant = quantity * 1.0;
+    if ( !menu.empty() )
+    {
+        
+        return  quant * price;
+    }
+
+    return 0.0;
+}
+
+void IKEAStore::IKEACafe::makeOrder(int orderID, std::string menu, int quantity)
+{
+    if (orderID != 0)
+    {
+        if ( !menu.empty() )
+        {
+            std::cout << "Customer Order with ID: " << orderID << " and Menu " << menu << " Quantity "
+                        << quantity << " has been finished, please to pick up at the corner " << std::endl;
+        }
+    }
+}
+
+void IKEAStore::IKEACafe::changeCoWorkerShift()
+{
+    std::cout << "Co woker with morning shift (E1) your shift is end, please to hand over task to next shift (E2)"
+                << std::endl;
+}
+
+void IKEAStore::deliverToCustomer(int totalOrder, std::string customerDetail, std::string deliveryAddress)
+{
+    if(totalOrder != 0)
+    std::cout << "Order with customer name : " << customerDetail << " with total order " << totalOrder << " pcs"
+    << " and deliver to address "<< deliveryAddress << std::endl;
+}
+
 struct Hotel 
 {
     int numOfRooms = 70;
@@ -240,12 +329,30 @@ struct Hotel
      
     void roomService(int roomNumber, std::string requestedService);
   
-    void bookRoom(int roomNumber, std::time_base date, std::string visitorName,
+    void bookRoom(int roomNumber, std::string date, std::string visitorName,
                     float price);
  
     void reserveRestaurant(std::string customerName, int numofCustomer);
 };
 
+void Hotel::roomService(int roomNumber, std::string requestedService)
+{
+    if (!requestedService.empty())
+        std::cout << "Room Number " << roomNumber << " is requested service " << requestedService << std::endl;
+}
+
+void Hotel::bookRoom(int roomNumber, std::string date, std::string visitorName, float price)
+{
+    if (roomNumber != 0)
+        std::cout << "Room on number " << roomNumber << " on date " << date << "on behalf of Mr." <<
+            visitorName << " with price " << price << " has been booked" << std::endl;
+}
+
+void Hotel::reserveRestaurant(std::string customerName, int numofCustomer)
+{
+    std::cout << "Table 6 has been reserve on behalf of "<< customerName << " for " << numofCustomer 
+        << " person " << std::endl;
+}
 struct BarcodeScanner 
 {
     int infraredType = 1;
@@ -262,6 +369,26 @@ struct BarcodeScanner
     
 };
 
+void BarcodeScanner::turnOn()
+{
+    std::cout << "Barcode has been turn on" << std::endl;
+}
+
+void BarcodeScanner::configureSensitivity(int newNumber)
+{
+    int oldNumber = 0;
+    oldNumber = newNumber;
+
+    std::cout << "Sensivity number has been changed " << std::endl;
+}
+
+bool BarcodeScanner::connectingStatus(int portNumber)
+{
+    if (portNumber != 0)
+        return true;
+
+    return false;
+}
 struct CustomerPoleDisplay 
 {
     int screenResolution = 2160;
@@ -277,6 +404,28 @@ struct CustomerPoleDisplay
 
     void turnOn();
 };
+
+void CustomerPoleDisplay::textToDisplay(std::string text)
+{
+    std::string oldText = "";
+
+    oldText = text;
+
+    std::cout << "Text to display : " << oldText << std::endl;
+}
+
+bool CustomerPoleDisplay::checkConnection(int portNumber)
+{
+    if (portNumber != 0)
+        return true;
+
+    return false;
+}
+
+void CustomerPoleDisplay::turnOn()
+{
+    std::cout << "Pole Display has been turn on" << std::endl;
+}
 
 struct MainPOSDisplay 
 {
@@ -294,6 +443,22 @@ struct MainPOSDisplay
     
 };
 
+void MainPOSDisplay::adjResolution(int newValue)
+{
+    int oldValue = 0;
+    oldValue = newValue;
+
+    std::cout << "New Resolution has been applied " << std::endl;
+}
+
+void MainPOSDisplay::adjBrightness(int newValue)
+{
+     int oldValue = 0;
+    oldValue = newValue;
+
+    std::cout << "New Brightness has been applied " << std::endl;
+}
+
 struct ReceiptPrinter 
 {
     int height = 5;
@@ -308,6 +473,26 @@ struct ReceiptPrinter
     
     bool conectToPOS(int portNumber); // return connection status to POS
 };
+
+void ReceiptPrinter::turnOn()
+{
+    std::cout << "Receipt printer has been turn on" << std::endl;
+}
+
+void ReceiptPrinter:: printReceipt(std::string orderDetail)
+{
+    std::cout << "Order detail : " << orderDetail << std::endl;
+}
+
+bool ReceiptPrinter::conectToPOS(int portNumber)
+{
+    if (portNumber != 0)
+    {
+        return true;
+    }
+
+    return false;
+}
 
 struct CashDrawer 
 {
@@ -324,6 +509,21 @@ struct CashDrawer
     bool conectToPOS(int portNumber); // return connection status to POS
 };
 
+float CashDrawer::putMoney(float money)
+{
+    float currentMoney = 0.0f;
+
+    currentMoney += money;
+
+    return currentMoney;
+}
+
+void CashDrawer::openCashDrawer()
+{
+    std::cout << "Cash Drawer has opened" << std::endl;
+}
+
+
 struct POS 
 {
     BarcodeScanner scanner; 
@@ -334,9 +534,27 @@ struct POS
   
     void inputTransaction(int articleNumber, float price, int quantity);
 
-    void printReceipt(int orderNumber, std::string orderDetail[]);
+    void printReceipt(int orderNumber, std::string orderDetail);
 
     void openCashDrawer();
 };
+
+void POS::inputTransaction(int articleNumber, float price, int quantity)
+{
+    std::cout << "Transaction been inputted on article number : " << articleNumber << " Quantity : "
+        << quantity << " and total price " << price << std::endl;
+}
+
+void POS::printReceipt(int orderNumber, std::string orderDetail)
+{
+    std::cout << "Transaction with \n order number : " << orderNumber << " Detail order : " 
+        << orderDetail << std::endl;
+}
+
+void POS::openCashDrawer()
+{
+    std::cout << "Cash drawer openned " << std::endl;
+}
+
 
 int main() { std::cout << "good to go!" << std::endl; }
